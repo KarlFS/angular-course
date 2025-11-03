@@ -9,7 +9,10 @@ const port = process.env.PORT || 3000;
 
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello world!');
-    // res.send(process.env.OPENAI_API_KEY);
+});
+
+app.get('/api/hello', (req: Request, res: Response) => {
+    res.send({ message: 'Hello world!' });
 });
 
 app.listen(port, () => {
